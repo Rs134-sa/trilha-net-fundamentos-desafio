@@ -1,38 +1,68 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+# 🚗 Sistema de Estacionamento em C#
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+## 📝 Descrição
+Este é um projeto de console simples desenvolvido em C# como parte do desafio de fundamentos da trilha .NET. O programa simula um sistema de gerenciamento de estacionamento, permitindo ao usuário cadastrar veículos por sua placa, removê-los (calculando o valor a ser pago com base no tempo de permanência) e listar todos os veículos atualmente estacionados.
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+---
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+## ✨ Funcionalidades
 
-A classe contém três variáveis, sendo:
+O sistema apresenta um menu interativo com as seguintes opções:
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+1.  **Cadastrar veículo:** Solicita a placa do veículo e o adiciona à lista de veículos estacionados.
+2.  **Remover veículo:** Solicita a placa do veículo e a quantidade de horas que ele permaneceu estacionado. Em seguida, calcula o valor total a ser pago com base em um preço inicial e um preço por hora (definidos no início da execução) e remove o veículo da lista.
+3.  **Listar veículos:** Exibe a placa de todos os veículos que estão no estacionamento.
+4.  **Encerrar:** Finaliza a execução do programa.
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+---
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+## 💻 Tecnologias Utilizadas
 
-A classe contém três métodos, sendo:
+-   **C#**: Linguagem de programação principal.
+-   **.NET**: Plataforma de desenvolvimento utilizada para criar a aplicação de console.
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+---
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+## 🚀 Como Executar o Projeto
 
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+Para executar este projeto em sua máquina local, você precisará ter o SDK do .NET instalado. Siga os passos abaixo:
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
+1.  **Clone o repositório** (caso o projeto esteja em um) ou simplesmente tenha os arquivos em um diretório local.
 
+2.  **Navegue até o diretório do projeto** através do seu terminal (como PowerShell, CMD ou Terminal):
+    ```sh
+    cd d:\Projetos\trilha-net-fundamentos-desafio\DesafioFundamentos
+    ```
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+3.  **Execute o projeto** com o seguinte comando do .NET CLI:
+    ```sh
+    dotnet run
+    ```
+
+4.  O programa será iniciado no console, solicitando o preço inicial e o preço por hora. Após fornecê-los, o menu principal será exibido para que você possa interagir com o sistema.
+
+---
+
+## 📂 Estrutura do Projeto
+
+O código-fonte está organizado da seguinte forma:
+
+```
+DesafioFundamentos/
+├── Models/
+│   └── Estacionamento.cs  # Classe principal que contém toda a lógica do estacionamento.
+└── Program.cs             # Ponto de entrada da aplicação, responsável pelo menu e interação com o usuário.
+```
+
+-   `Program.cs`: Arquivo responsável por iniciar a aplicação, coletar os preços do usuário, instanciar a classe `Estacionamento` e exibir o menu de opções em um loop.
+-   `Models/Estacionamento.cs`: Contém a classe `Estacionamento`, que encapsula a lógica de negócio do sistema. Isso inclui os métodos para adicionar, remover e listar veículos, bem como o cálculo do preço.
+
+---
+
+*Este projeto foi desenvolvido como parte do desafio de projeto "Construindo um Sistema Para Estacionamento com C#" da DIO.*
+
+---
+
+## 👨‍💻 Autoria
+
+Feito por [Raiane de Sá](https://github.com/Raiane-S) - Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/raiane-s/)!
